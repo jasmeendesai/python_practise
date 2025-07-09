@@ -3,6 +3,17 @@
 # b = input()
 # print(f"Sum is {a+b}")
 
+# tuple -> a = ("a", "b", "c")
+# list -> b = ["a", "b", "c"]
+# dict -> obj
+
+
+# Taking Multiple inputs
+
+# x, y = input("Enter two number : ").split()
+# print("first number ", x)
+# print("second number ", y)
+
 # ---------------------------------------------------
 
 # If else
@@ -48,7 +59,70 @@ x%y ⇒ Remainder when x is divided by y
 # else:
 #     print("None")
 
-num = int(input("Enter your score: "))
-if (num > 8):
-    y = 9
-print(y) 
+# num = int(input("Enter your score: "))
+# if (num > 8):
+#     y = 9
+# print(y)
+
+# WAP to find maximum of 3 distinct numbers using Nested If-Else
+# a = int(input("Enter first number : "))
+# b = int(input("Enter second number : "))
+# c = int(input("Enter third number : "))
+
+# if(a>b):
+#     if(a>c):
+#         print(f"a is greater")
+#     else:
+#         print(f"c is greater")
+# else:
+#     if(b>c):
+#         print(f"b is greater")
+#     else:
+#         print(f"c is greater")
+
+
+# Assignment: WAP to find maximum of 4 distinct numbers using Nested If-Else
+
+# a = int(input("Enter first number : "))
+# b = int(input("Enter second number : "))
+# c = int(input("Enter third number : "))
+# d = int(input("Enter fourth number : "))
+
+# if(a>b):
+#     if(a>c):
+#         if(a>d):
+#             print(f"a greater")
+#         else:
+#             print(f"d greater")
+#     else:
+#         if(c>d):
+#             print(f"c is greater")
+#         else:
+#             print(f"d is greater")
+# else:
+#     if(b>c):
+#         if(b>d):
+#             print(f"b is greater")
+#         else:
+#             print(f"d is greater")
+#     else:
+#         if(c>d):
+#             print(f"c greater")
+#         else:
+#             print(f"d is greater")
+
+
+# WAP to print relevant message according to the grade of the student.
+# grade = int(input("Enter the grade : "))
+# match(grade):
+#     case 10 :
+#         print("Outstanding")
+#     case 9 :
+#         print("Execellent")
+#     case 8 :
+#         print("Good")
+#     case 7 :
+#         print("Average")
+#     case default:
+#         print("Fail")
+    
