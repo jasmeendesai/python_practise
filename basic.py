@@ -57,16 +57,131 @@ Sequence Type ---------->
 2)list --> like array in other languages -- ordered collection of similar or different data
 3)tuple --> similar to list only difference is tuples are immutable
 """
-
+# String
 s="Welcome to the hotel"
 print(s)
 print(type(s))
 print(s[1])
 print(s[-1])
 
+# List
 l = [1, 2, 3, "h", "i", 4]
 print(l)
 print(type(l))
 print(l[-2])
+l.append(5) 
+print(l)
+l.remove(3)
+print(l)
+
+# Tuple
+tup1 = ()
+tup2 = ('geek', 'hi')
+
+print(tup2)
+print(type(tup2))
+
+tup = tuple([1, 2, 3, 4, 5])
+print(tup)
 
 
+"""
+Boolean Type ------------>
+True / False valuse --> python is case sensitive 
+Belongs to class bool
+"""
+print(type(True))
+print(type(False))
+
+
+"""
+Set Type ---------------->
+set is unorderd collection of data types that is iterable, mutable and has no duplicate
+"""
+
+s1 = set("GeeksforGeeks")
+print(s1)
+
+s2 = set(["Geeks", "for", "Geeks"])
+print(s2)
+
+# loop through set
+for i in s1:
+    print(i)
+
+print("Geeks" in s2)
+
+
+"""
+Dictionary Type ---------->
+it is collection of data values that is used to store data values like a map ---- in the form of key : value pair
+
+values can be of any datatype and be duplicated. but keys are unique and immutable
+"""
+
+d1 = {"name" : "Jasmeen", "age" : 27}
+print(d1)
+print(type(d1))
+
+d2 = dict({"name" : "Jasmeen", "age" : 27})
+print(d2)
+
+print(d2["name"])
+print(d2.get("name"))
+
+"""
+Given marks of a student, print on the screen:
+
+Grade A if marks >= 90
+Grade B if marks >= 70
+Grade C if marks >= 50
+Grade D if marks >= 35
+Fail, otherwise.
+"""
+def studentGrade(marks):
+    if(marks >=90):
+        print("Grade A")
+    elif(marks >=70):
+        print("Grade B")
+    elif(marks >=50):
+        print("Grade C")
+    elif(marks >=35):
+        print("Grade D")
+    else:
+        print("Grade Fail")
+
+studentGrade(70)
+
+
+class Solution:
+    def studentGrade(marks):
+        if(marks >=90):
+            print("Grade A")
+        elif(marks >=70):
+            print("Grade B")
+        elif(marks >=50):
+            print("Grade C")
+        elif(marks >=35):
+            print("Grade D")
+        else:
+            print("Grade Fail")
+
+
+Solution.studentGrade(95)
+
+
+class Solution:
+    def studentGrade(self, marks):
+        if (marks >= 90):
+            print("Grade A")
+        elif (marks >= 70):
+            print("Grade B")
+        elif (marks >= 50):
+            print("Grade C")
+        elif (marks >= 35):
+            print("Grade D")
+        else:
+            print("Grade Fail")
+
+grade = Solution()
+grade.studentGrade(30)
