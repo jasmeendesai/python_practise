@@ -185,3 +185,117 @@ class Solution:
 
 grade = Solution()
 grade.studentGrade(30)
+
+
+"""
+Given the integer day denoting the day number, print on the screen which day of the week it is. Week starts from Monday and for values greater than 7 or less than 1, print Invalid.
+
+Ensure only the 1st letter of the answer is capitalised.
+
+For printing use:-
+for Python : print()
+
+"""
+
+def dayOfWeek(day):
+    match(day):
+        case 1 : print("MONDAY")
+        case 2 : print("TUESDAY")
+        case 3 : print("WEDNESDAY")
+        case 4 : print("THURSDAY")
+        case 5 : print("FRIDAY")
+        case 6 : print("SATURDAY")
+        case 7 : print("SUNDAY")
+        case default : print("Invalid")
+
+dayOfWeek(1)
+dayOfWeek(0)
+dayOfWeek(8)
+
+"""
+Loops ---> 
+1)while loop --> used to execute a block of statement repeatedly until a give condition is true, when the condition false line after loop executes immediately
+
+------> while with else statement
+while condition:
+     # execute these statements
+else:
+     # execute these statements
+"""
+
+"""
+2) For loop ---> Used for sequential traversal(string, list, tuple, dict, set, ranges) --> In python we have for in loop similar to forEach loop in other languages
+
+-----> Syntax
+for iterator_var in sequence:
+    statements(s)
+
+------> range() function ---> is commonly used for loops to generate sequence of numbers
+--> range(stop) --> generate numbers from 0 till stop --> range(1) --> 0 to 1
+--> range(start, stop) --> generate numbers from start to stop --> range(2, 5) ---> 2 to 5 --> 2, 3, 4
+--> range(start, stop, step) ---> generate numbers from start to stop incrementing in steps ---> range(0, 10, 2) --> 0, 2, 4, 6, 8
+
+
+--------->Control Statements
+i) continue --> skips the particular iteration
+ii) break --> breaks the loop
+iii) pass --> used to write empty loops --> it is used for empty control statements, functions, and classes ---> null operator or a placeholder.  It is used when a statement is syntactically required but we don't want to execute any code.
+
+------> enumerate() function --> used with for loop to iterate over the iterable while also keeping track of index of each item
+"""
+li = [1, 2, 3, 4, 5]
+for num in li:
+    print(num)
+
+tup = ("geeks", "for", "geeks")
+for str in tup:
+    print(str)
+
+s = "Geeks"
+for i in s:
+    print(i)
+
+d = dict({"name" : "Jasmeen", "age" : 27})
+for i in d:
+    print((i, d[i]))
+
+set1 = {1, 2, 3, 4, 5}
+for i in set1:
+    print(i)
+
+for i in range(0, 10, 2):
+    print(i)
+
+for i in range(5):
+    if(i == 3):
+        pass
+    else:
+        print(i)
+
+li = ["eat", "sleep", "repeat"]
+
+for i, j in enumerate(li):
+    print(i, j)
+
+
+"""
+Functions --->
+
+syntax --> 
+1) def function_name(parameters):
+     #statement
+     return epxression
+
+2) def function_name(parameter : data_type) -> return_type:
+     #statement
+     return expression
+"""
+
+def evenOdd(x : int) ->str:
+    if(x %2 ==0):
+        print("Even")
+    else:
+        print("Odd")
+
+evenOdd(16)
+evenOdd(15)
