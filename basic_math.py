@@ -151,3 +151,118 @@ An Amrstrong number is a number that is equal to the sum of its own digits each 
  Output: True              
  Explanation: 3^3+5^3+1^3 = 27 + 343 + 1 = 371
 """
+
+# TC -- O(logn)
+
+def check_amstrongNum(n):
+    sum = 0
+    temp = n
+
+    k = len(str(n))
+
+    while(n>0):
+        ld = n % 10
+        sum = sum + (ld ** k)
+        n = n//10
+
+    if(temp == sum):
+        return True
+    else:
+        return False
+    
+print(f"Amstrong number", check_amstrongNum(153))
+print(f"Amstrong number", check_amstrongNum(15))
+
+"""
+https://takeuforward.org/data-structure/print-all-divisors-of-a-given-number/
+Problem Statement: Given an integer N, return all divisors of N.
+A divisor of an integer N is a positive integer that divides N without leaving a remainder. In other words, if N is divisible by another integer without any remainder, then that integer is considered a divisor of N.
+
+ Example 1:
+ Input:N = 36              
+ Output:[1, 2, 3, 4, 6, 9, 12, 18, 36]
+ Explanation: The divisors of 36 are 1, 2, 3, 4, 6, 9, 12, 18, 36.
+         
+ Example 2:
+ Input:N =12 
+ Output: [1, 2, 3, 4, 6, 12]
+ Explanation: The divisors of 12 are 1, 2, 3, 4, 6, 12. 
+"""
+
+# TC -- O(n)
+
+def print_allDivisors(n):
+    res = []
+
+    for i in range(1, n+1):
+        if(n % i == 0):
+            res.append(i)
+    return res
+
+print(print_allDivisors(36))
+
+# TC -- 
+
+def print_allDivisors1(n):
+    res = []
+    limit = int(math.sqrt(n))
+
+    for i in range(1, limit+1):
+        if(n % i == 0):
+            res.append(i)
+            if(i!=n//i):
+                res.append(n//i)
+
+    res.sort()
+    return res
+
+print(print_allDivisors1(36))
+
+
+"""
+ * https://takeuforward.org/data-structure/check-if-a-number-is-prime-or-not/
+ * Problem Statement: Given an integer N, check whether it is prime or not. A prime number is a number that is only divisible by 1 and itself and the total number of divisors is 2.
+ * Example 1:
+   Input:N = 2
+   Output:True      
+   Explanation: 2 is a prime number because it has two divisors: 1 and 2 (the number itself).   
+
+   Example 2:   
+   Input:N =1         
+   Output: False      
+   Explanation: 10 is not prime, it is a composite number because it has 4 divisors: 1, 2, 5 and 10.
+"""
+# TC -- O(n)
+
+def isPrime(n):
+    count = 0
+    for i in range(1,n+1):
+        if(n%i==0):
+            count+=1
+
+    if(count == 2): 
+        return True
+    else:
+        return False
+    
+print(f"Prime", isPrime(11))
+print(f"Prime", isPrime(4))
+
+# TC --> O(sqrt(n))
+
+def isPrime2(n):
+    count = 0
+    limit = int(math.sqrt(n))
+    for i in range(1, limit+1):
+        if(n%i == 0):
+            count +=1
+            if(n%i != i):
+                count +=1
+    
+    if(count == 2):
+        return True
+    else:
+        return False
+    
+print(f"Prime", isPrime2(11))
+print(f"Prime", isPrime2(4))
